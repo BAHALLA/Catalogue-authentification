@@ -29,6 +29,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
                 "Access-Control-Allow-Method, Authorization");
         response.addHeader("Access-Control-Expose-Headers","Access-Control-Allow-Origin, " +
                 "Access-Control-Allow-Credentials, Authorization");
+        response.addHeader("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT,PATCH");
 
         if(request.getMethod().equals("OPTIONS")) {
             response.setStatus(HttpServletResponse.SC_OK);
