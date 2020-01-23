@@ -32,8 +32,7 @@ public class DemoApplication {
             accountService.addUser("user","user","user");
 
             accountService.addRoleToUser("ADMIN","admin");
-
-            userRepository.findAll().forEach(System.out::println);
+            System.out.println("application started at 8080 ...");
         };
     }
 }
